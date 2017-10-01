@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<title>Details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+.button {
+    position: relative;
+    background-color: #000000;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #d9d9d9;
+    display: block;
+    position: absolute;
+    padding-top: 250%;
+    padding-left: 150%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button4 {border-radius: 100px;}
+.button5 {border-radius: 260%;}
+</style>
+
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b><picture><img src="logo.png" alt="Flowers" style="width:auto;"></picture></b></h3>
+  </div>
+  
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+  
+    <a href="#" class="w3-bar-item w3-button"></a>
+	
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Cricket Kit <i class="fa fa-caret-down"></i>
+    </a>	
+	
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>cricket things</a>
+      <a href="#" class="w3-bar-item w3-button">Gloves</a>
+      <a href="#" class="w3-bar-item w3-button">Supports</a>
+      <a href="#" class="w3-bar-item w3-button">kits</a>
+    </div>
+	
+    <a href="#" class="w3-bar-item w3-button">Crciket Bats</a>
+    <a href="#" class="w3-bar-item w3-button">Cricket Balls</a>
+    <a href="#" class="w3-bar-item w3-button">Stunps</a>
+    <a href="#" class="w3-bar-item w3-button">Cricket Gloves</a>
+	<a href="#" class="w3-bar-item w3-button">Helmets</a>
+	<a href="#" class="w3-bar-item w3-button">Goggles</a>
+	<a href="#" class="w3-bar-item w3-button">Cricket Grips</a>
+	<a href="#" class="w3-bar-item w3-button">Sidearm Ball Throwers</a>
+	<a href="#" class="w3-bar-item w3-button">Cones & Space Markers</a>
+	<a href="#" class="w3-bar-item w3-button">Cricket Accessories</a>
+	<a href="#" class="w3-bar-item w3-button">Training Balls</a>
+	<a href="#" class="w3-bar-item w3-button">Bails</a>
+	<a href="#" class="w3-bar-item w3-button">Cricket Kits</a>
+	<a href="#" class="w3-bar-item w3-button">Nets</a>
+	<a href="#" class="w3-bar-item w3-button">Fitness Balls</a>
+	<a href="#" class="w3-bar-item w3-button">Cricket Bags</a>
+	<a href="#" class="w3-bar-item w3-button">Treadmills</a>
+	<a href="#" class="w3-bar-item w3-button">Bars</a>
+	<a href="#" class="w3-bar-item w3-button">Bat Mallets</a>
+	<a href="#" class="w3-bar-item w3-button">Bat Tapes</a>
+	<a href="#" class="w3-bar-item w3-button">Covers</a>
+	
+	<a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Badminton <i class="fa fa-caret-down"></i>
+    </a>
+	
+	<a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Football <i class="fa fa-caret-down"></i>
+    </a>
+	
+	<a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Skating <i class="fa fa-caret-down"></i>
+    </a>
+	
+	<a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Cycling <i class="fa fa-caret-down"></i>
+    </a>
+	
+	<a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Swimming <i class="fa fa-caret-down"></i>
+    </a>
+	
+	<a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Table Tennis <i class="fa fa-caret-down"></i>
+    </a>
+	
+	<a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Tennis <i class="fa fa-caret-down"></i>
+    </a>
+	
+  </div>
+  
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+  
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+  
+	<p class="w3-right">
+	<form>
+		<input type="text" name="search" placeholder="Search..">
+	</form><i class="fa fa-search"></i></p>
+    <p class="w3-left">KRX 20 KG DM COMBO 3-WB Home Gym Kit</p>
+	
+  </header>
+
+  <!-- Image header -->
+  
+  <div class="w3-display-container w3-container">
+    <img src="na-krx-25-kg-dm.jpg" alt="shopping-cart" style="width:100%">
+  </div>
+	<p>
+		<button class="button button4 w3-orange">Add to Cart<i class="fa fa-shopping-cart"></i></button>
+		<button class="button button5">BUY</button> 
+	</p>
+		
+		<p style="color:orange;" class="w3-left">KRX 20 KG DM COMBO 3-WB Home Gym Kit</p><br> <b> <P style="color:blue;"> $20.50 &nbsp 5% off </p> </b>
+		&nbsp <P style="color:green;"> <b> CASH ON DELIVERY AVAILABLE </b> </p>
+		<p> 
+			*No Cost EMINo Cost EMI on Bajaj Finserv EMI Card on cart value above T&C <br>
+			*No Cost EMINo Extra Cost EMI on HDFC Bank Credit Card T&C 
+		</p>
+		
+		<p>
+		
+		<b>Description</b> <br>
+			&nbsp 
+				20 Kg of PVC weight (2 Kg x 4 = 8Kg + 3 Kg x 4 = 12 Kg ),1 x 3 feet Curl Rod + 2 x 14 " dumbbell Rods , 100% pure leather gym gloves + 1 Skipping Rope + 1 Hand Gripper + 2Locks and clippers comes with the rods ,A Combination Of All Gym Equipments For The Perfect Workout,It Is Highly Durable And Long Lasting,A Perfect Muscle Builder
+		</p>
+  <div class=" " id="cricket kit">
+  </div>
+
+  <!-- Product grid -->
+  
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">We're hiring</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> NK Products</p>
+        <p><i class="fa fa-fw fa-phone"></i> 040-970534691</p>
+        <p><i class="fa fa-fw fa-envelope"></i> naveench006.nk@mail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+		
+        <br>
+		
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">Powered by NK Products</div>
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "sports products" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
